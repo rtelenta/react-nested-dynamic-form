@@ -6,6 +6,8 @@ This project shows you how to create a form in _React_ with nested components an
 
 Note: The components can be organized in a better way but the current organization is an excuse to use a _FormProvider_ from _React hook form_
 
+[DEMO](https://rtelenta.github.io/react-nested-dynamic-form/)
+
 
 ## Screenshoots 💻
 
