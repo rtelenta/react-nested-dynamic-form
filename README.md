@@ -39,8 +39,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Built with 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 * [React](https://reactjs.org/)
 * [Tailwind](https://tailwindcss.com/)
 * [React hook form](https://react-hook-form.com/)
