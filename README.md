@@ -1,12 +1,21 @@
-# Getting Started with Create React App
+# React Nested Dynamic Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started 📋
 
-## Available Scripts
+This project shows you how to create a form in _React_ with nested components and dynamic fields.
 
-In the project directory, you can run:
+Note: The components can be organized in a better way but the current organization is an excuse to use a _FormProvider_ from _React hook form_
 
-### `yarn start`
+
+## Screenshoots 💻
+
+![](https://user-images.githubusercontent.com/13630376/107466976-f81b2f00-6b32-11eb-8246-4ad00faeca88.png){ width=50% }
+
+### Available Scripts 🚀
+
+```
+yarn start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
+```
+yarn build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,18 +35,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Built with 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [React](https://reactjs.org/)
+* [Tailwind](https://tailwindcss.com/)
+* [React hook form](https://react-hook-form.com/)
