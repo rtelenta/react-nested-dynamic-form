@@ -1,5 +1,7 @@
+import { ArrowDown, ArrowUp, PlusCircle, XCircle } from "react-feather";
 import { useFieldArray, useFormContext } from "react-hook-form";
 import { defaultDirection, directionType } from "../App";
+import Button from "./Button";
 import Label from "./Label";
 
 const Addresses: React.FC = () => {
@@ -7,7 +9,7 @@ const Addresses: React.FC = () => {
 
   const fieldName = "directions";
 
-  const { fields, append, remove } = useFieldArray<directionType>({
+  const { fields, append, remove, move } = useFieldArray<directionType>({
     control,
     name: fieldName,
   });
@@ -16,18 +18,28 @@ const Addresses: React.FC = () => {
     append(defaultDirection);
   };
 
+  const onMoveUp = (index: number) => {
+    const minIndex = 0;
+    const prevIndex = index - 1;
+
+    if (index > minIndex) move(index, prevIndex);
+  };
+
+  const onMoveDown = (index: number) => {
+    const maxIndex = fields.length - 1;
+    const nextIndex = index + 1;
+
+    if (index < maxIndex) move(index, nextIndex);
+  };
+
   return (
     <div className="mt-16">
       <div className="flex items-center">
         <h2 className="mr-8 text-xl">Directions</h2>
 
-        <button
-          onClick={onNewDirection}
-          type="button"
-          className="bg-white py-2 px-3 border border-indigo-600 rounded-md shadow-sm text-sm leading-4 font-medium text-indigo-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
-          Add new direction +
-        </button>
+        <Button onClick={onNewDirection} fill="outline" icon={<PlusCircle />}>
+          New direction
+        </Button>
       </div>
 
       <div className="col-span-6" aria-hidden="true">
@@ -40,15 +52,33 @@ const Addresses: React.FC = () => {
         ({ id, street_address, city, state, postal_code }, index: number) => (
           <div className="grid grid-cols-6 gap-6 mt-4" key={id}>
             <div className="col-span-6">
-              <div className="flex items-center">
-                <h3 className="font-medium mr-8">Address {index + 1}</h3>
-                <button
-                  onClick={() => remove(index)}
-                  type="button"
-                  className="bg-white py-2 px-3 border border-red-600 rounded-md shadow-sm text-sm leading-4 font-medium text-red-600 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                >
-                  Remove address {index + 1}
-                </button>
+              <div className="sm:flex items-center justify-between">
+                <h3 className="font-medium mr-8 mb-4 sm:mb-0">
+                  Address {index + 1}
+                </h3>
+
+                <div className="flex items-center">
+                  <Button
+                    className="mr-2"
+                    icon={<ArrowUp />}
+                    fill="outline"
+                    onClick={() => onMoveUp(index)}
+                  />
+                  <Button
+                    className="mr-8"
+                    icon={<ArrowDown />}
+                    fill="outline"
+                    onClick={() => onMoveDown(index)}
+                  />
+                  <Button
+                    onClick={() => remove(index)}
+                    fill="outline"
+                    icon={<XCircle />}
+                    color="red"
+                  >
+                    Remove
+                  </Button>
+                </div>
               </div>
             </div>
 
