@@ -9,7 +9,7 @@ Note: The components can be organized in a better way but the current organizati
 
 ## Screenshoots 💻
 
-![](https://user-images.githubusercontent.com/13630376/107466976-f81b2f00-6b32-11eb-8246-4ad00faeca88.png){ width=50% }
+![](https://user-images.githubusercontent.com/13630376/107466976-f81b2f00-6b32-11eb-8246-4ad00faeca88.png)
 
 ### Available Scripts 🚀
 
