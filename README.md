@@ -9,9 +9,9 @@ Note: The components can be organized in a better way but the current organizati
 [DEMO](https://rtelenta.github.io/react-nested-dynamic-form/)
 
 
-## Screenshoots 💻
+## Screenshoot 💻
 
-![](https://user-images.githubusercontent.com/13630376/107466976-f81b2f00-6b32-11eb-8246-4ad00faeca88.png)
+![](https://user-images.githubusercontent.com/13630376/107578210-74f4ea00-6bc1-11eb-9f0e-c0523160ce4c.png)
 
 ### Available Scripts 🚀
 
